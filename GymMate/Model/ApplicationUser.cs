@@ -11,5 +11,7 @@ namespace GymMate.Model
         public DateTime? EmailConfirmExpireDataTime { get; set; }
         public string? PasswordResetCode { get; set; }
         public DateTime? PasswordResetExpireDate { get; set; }
+        public ICollection<Routine> Routines { get; set; }
+
     }
 }

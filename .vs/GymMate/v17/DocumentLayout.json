@@ -1,0 +1,451 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\controllers\\routinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\controllers\\routinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\repository\\irepository\\iroutinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\repository\\irepository\\iroutinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\repository\\routinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\repository\\routinerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\addexercisetoroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\addexercisetoroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\updateexerciseinroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\updateexerciseinroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\exerciseinroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\exerciseinroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\updateroutinenamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\updateroutinenamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\removeexercisefromroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\removeexercisefromroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\exercisetoroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\exercisetoroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\routineexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\routineexercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Migrations\\20250506101004_edit2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GymMate\\Migrations\\20250506101004_edit2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\routinedetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\routinedetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\routineexercisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\routineexercisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\addroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\addroutinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Migrations\\20250506084539_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GymMate\\Migrations\\20250506084539_image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\dto\\exercisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\dto\\exercisedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\muscle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\muscle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\routine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\routine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\exercise.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|c:\\users\\tarahan\\onedrive\\desktop\\gymmate\\gymmate\\gymmate\\model\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D93626-93E4-4A7D-9A40-40CF5E0D1564}|GymMate\\GymMate.csproj|solutionrelative:gymmate\\model\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoutineController.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Controllers\\RoutineController.cs",
+              "RelativeDocumentMoniker": "GymMate\\Controllers\\RoutineController.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Controllers\\RoutineController.cs",
+              "RelativeToolTip": "GymMate\\Controllers\\RoutineController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAEwFUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:35:12.45Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRoutineRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Repository\\IRepository\\IRoutineRepository.cs",
+              "RelativeDocumentMoniker": "GymMate\\Repository\\IRepository\\IRoutineRepository.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Repository\\IRepository\\IRoutineRepository.cs",
+              "RelativeToolTip": "GymMate\\Repository\\IRepository\\IRoutineRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwA0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:29:26.431Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoutineRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Repository\\RoutineRepository.cs",
+              "RelativeDocumentMoniker": "GymMate\\Repository\\RoutineRepository.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Repository\\RoutineRepository.cs",
+              "RelativeToolTip": "GymMate\\Repository\\RoutineRepository.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwEgAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:29:01.791Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "GymMate\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "GymMate\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:23:14.623Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddExerciseToRoutineDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\AddExerciseToRoutineDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\AddExerciseToRoutineDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\AddExerciseToRoutineDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\AddExerciseToRoutineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:48:45.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateExerciseInRoutineDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\UpdateExerciseInRoutineDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\UpdateExerciseInRoutineDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\UpdateExerciseInRoutineDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\UpdateExerciseInRoutineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:48:14.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateRoutineNameDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\UpdateRoutineNameDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\UpdateRoutineNameDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\UpdateRoutineNameDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\UpdateRoutineNameDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:39:51.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExerciseInRoutineDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\ExerciseInRoutineDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\ExerciseInRoutineDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\ExerciseInRoutineDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\ExerciseInRoutineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T09:56:41.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RemoveExerciseFromRoutineDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\RemoveExerciseFromRoutineDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\RemoveExerciseFromRoutineDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\RemoveExerciseFromRoutineDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\RemoveExerciseFromRoutineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:38:45.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExerciseToRoutineDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\ExerciseToRoutineDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\ExerciseToRoutineDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\ExerciseToRoutineDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\ExerciseToRoutineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:34:17.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20250506101004_edit2.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Migrations\\20250506101004_edit2.cs",
+              "RelativeDocumentMoniker": "GymMate\\Migrations\\20250506101004_edit2.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Migrations\\20250506101004_edit2.cs",
+              "RelativeToolTip": "GymMate\\Migrations\\20250506101004_edit2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:10:04.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoutineExercise.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\RoutineExercise.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\RoutineExercise.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\RoutineExercise.cs",
+              "RelativeToolTip": "GymMate\\Model\\RoutineExercise.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:13:52.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RoutineDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\RoutineDetailsDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\RoutineDetailsDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\RoutineDetailsDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\RoutineDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T10:01:48.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddRoutineDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\AddRoutineDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\AddRoutineDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\AddRoutineDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\AddRoutineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T13:23:51.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RoutineExerciseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\RoutineExerciseDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\RoutineExerciseDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\RoutineExerciseDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\RoutineExerciseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:49:15.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ExerciseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\ExerciseDto.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\DTO\\ExerciseDto.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\DTO\\ExerciseDto.cs",
+              "RelativeToolTip": "GymMate\\Model\\DTO\\ExerciseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T13:34:58.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250506084539_image.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Migrations\\20250506084539_image.cs",
+              "RelativeDocumentMoniker": "GymMate\\Migrations\\20250506084539_image.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Migrations\\20250506084539_image.cs",
+              "RelativeToolTip": "GymMate\\Migrations\\20250506084539_image.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T08:45:39.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Muscle.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\Muscle.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\Muscle.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\Muscle.cs",
+              "RelativeToolTip": "GymMate\\Model\\Muscle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:13:04.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Routine.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\Routine.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\Routine.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\Routine.cs",
+              "RelativeToolTip": "GymMate\\Model\\Routine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:06:20.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Program.cs",
+              "RelativeDocumentMoniker": "GymMate\\Program.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Program.cs",
+              "RelativeToolTip": "GymMate\\Program.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:23:41.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Exercise.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\Exercise.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\Exercise.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\Exercise.cs",
+              "RelativeToolTip": "GymMate\\Model\\Exercise.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:13:31.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "GymMate\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "GymMate\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwCUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T12:23:31.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "GymMate\\Model\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Model\\ApplicationUser.cs",
+              "RelativeToolTip": "GymMate\\Model\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T11:54:04.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "GymMate\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Tarahan\\OneDrive\\Desktop\\GymMate\\GymMate\\GymMate\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "GymMate\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T11:53:03.006Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 400,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -108,6 +108,110 @@ namespace GymMate.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("GymMate.Model.Exercise", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MuscleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MuscleId");
+
+                    b.ToTable("Exercises");
+                });
+
+            modelBuilder.Entity("GymMate.Model.Muscle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Muscles");
+                });
+
+            modelBuilder.Entity("GymMate.Model.Routine", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Routines");
+                });
+
+            modelBuilder.Entity("GymMate.Model.RoutineExercise", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ExerciseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Reps")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoutineId")
+                        .HasColumnType("int");
+
+                    b.Property<float?>("Weight")
+                        .HasColumnType("real");
+
+                    b.Property<int>("set")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExerciseId");
+
+                    b.HasIndex("RoutineId");
+
+                    b.ToTable("RoutineExercises");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -241,6 +345,47 @@ namespace GymMate.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("GymMate.Model.Exercise", b =>
+                {
+                    b.HasOne("GymMate.Model.Muscle", "Muscle")
+                        .WithMany("Exercises")
+                        .HasForeignKey("MuscleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Muscle");
+                });
+
+            modelBuilder.Entity("GymMate.Model.Routine", b =>
+                {
+                    b.HasOne("GymMate.Model.ApplicationUser", "User")
+                        .WithMany("Routines")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("GymMate.Model.RoutineExercise", b =>
+                {
+                    b.HasOne("GymMate.Model.Exercise", "Exercise")
+                        .WithMany("RoutineExercises")
+                        .HasForeignKey("ExerciseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GymMate.Model.Routine", "Routine")
+                        .WithMany("RoutineExercises")
+                        .HasForeignKey("RoutineId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Exercise");
+
+                    b.Navigation("Routine");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -290,6 +435,26 @@ namespace GymMate.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("GymMate.Model.ApplicationUser", b =>
+                {
+                    b.Navigation("Routines");
+                });
+
+            modelBuilder.Entity("GymMate.Model.Exercise", b =>
+                {
+                    b.Navigation("RoutineExercises");
+                });
+
+            modelBuilder.Entity("GymMate.Model.Muscle", b =>
+                {
+                    b.Navigation("Exercises");
+                });
+
+            modelBuilder.Entity("GymMate.Model.Routine", b =>
+                {
+                    b.Navigation("RoutineExercises");
                 });
 #pragma warning restore 612, 618
         }
