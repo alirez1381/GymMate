@@ -11,6 +11,8 @@ namespace GymMate.Repository.IRepository
         Task<UserDTO> Register(RegisterationRequestDTO registerationRequest);
         Task<bool> ForgotPasswordAsync(string email);
         Task<bool> ResetPasswordAsync(string email, string code, string newPassword);
+        Task<ProfileDTO?> GetProfile(string email);
+        Task<bool> UpdateProfile(ProfileDTO model);
 
 
 

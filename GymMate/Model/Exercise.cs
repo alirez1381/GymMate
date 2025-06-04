@@ -8,7 +8,9 @@
 
         public int MuscleId { get; set; }
         public Muscle Muscle { get; set; }
+        public byte[]? ExerciseImg { get; set; }
 
-        public ICollection<RoutineExercise> RoutineExercises { get; set; }
+
+        public List<RoutineExercise>? RoutineExercises { get; set; }
     }
 }

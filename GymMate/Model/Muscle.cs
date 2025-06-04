@@ -7,6 +7,6 @@
         public byte[]? Image { get; set; }
 
 
-        public ICollection<Exercise> Exercises { get; set; }
+        public List<Exercise> Exercises { get; set; }
     }
 }

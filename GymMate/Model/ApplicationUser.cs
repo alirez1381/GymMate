@@ -8,6 +8,7 @@ namespace GymMate.Model
         public string? LastName { get; set; }
         public string? Weight { get; set; }
         public string? EmailVerificationCode { get; set; }
+        public byte[]? Image { get; set; }
         public DateTime? EmailConfirmExpireDataTime { get; set; }
         public string? PasswordResetCode { get; set; }
         public DateTime? PasswordResetExpireDate { get; set; }

@@ -1,4 +1,5 @@
-﻿using GymMate.Model;
+﻿using GymMate.Data;
+using GymMate.Model;
 using GymMate.Model.DTO;
 using GymMate.Models.DTO;
 using GymMate.Repository;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GymMate.Controllers
 {
@@ -17,14 +19,20 @@ namespace GymMate.Controllers
     {
         private readonly IRoutineRepository _routineRepository;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationDbContext _db;
 
-        public RoutineController(IRoutineRepository routineRepository, UserManager<ApplicationUser> userManager)
+        public RoutineController(IRoutineRepository routineRepository, UserManager<ApplicationUser> userManager,ApplicationDbContext db)
         {
             _routineRepository = routineRepository;
             _userManager = userManager;
+            _db = db;
         }
         [HttpPost]
         [Authorize]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> AddRoutine([FromBody] AddRoutineDto model)
         {
 
@@ -37,12 +45,21 @@ namespace GymMate.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetExercises([FromQuery] string? muscleName, [FromQuery] string? search)
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
+        public async Task<IActionResult> GetExercises()
         {
-            var exercises = await _routineRepository.GetExercisesAsync(muscleName, search);
+            var exercises = await _routineRepository.GetExercisesAsync();
             return Ok(exercises);
         }
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAllMuscles()
         {
             var muscles = await _routineRepository.GetAllMusclesAsync();
@@ -50,8 +67,12 @@ namespace GymMate.Controllers
         }
 
 
-        [HttpPost()]
-        [Authorize]
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
         public async Task<IActionResult> UpdateRoutineName([FromBody] UpdateRoutineNameDto dto)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -62,7 +83,11 @@ namespace GymMate.Controllers
         }
 
         [HttpPost()]
-        [Authorize]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
         public async Task<IActionResult> AddExerciseToRoutine([FromBody] AddExerciseToRoutineDto dto)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -72,8 +97,12 @@ namespace GymMate.Controllers
             return result ? Ok("Exercise added.") : BadRequest("Exercise already exists or routine not found.");
         }
 
-        [HttpPost()]
-        [Authorize]
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
         public async Task<IActionResult> UpdateExerciseInRoutine([FromBody] UpdateExerciseInRoutineDto dto)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -83,8 +112,12 @@ namespace GymMate.Controllers
             return result ? Ok("Exercise updated.") : NotFound();
         }
 
-        [HttpPost()]
-        [Authorize]
+        [HttpDelete]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
         public async Task<IActionResult> RemoveExerciseFromRoutine([FromBody] RemoveExerciseFromRoutineDto dto)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -96,8 +129,12 @@ namespace GymMate.Controllers
 
 
 
-        [HttpPost]
-        [Authorize]
+        [HttpDelete]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
         public async Task<IActionResult> DeleteRoutine(int id)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -112,8 +149,13 @@ namespace GymMate.Controllers
         }
 
 
-        [HttpGet()]
+        [HttpGet]
         [Authorize]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
         public async Task<IActionResult> GetMyRoutines()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -124,5 +166,73 @@ namespace GymMate.Controllers
             return Ok(routines);
         }
 
+        [HttpGet]
+        [Authorize]
+        [HttpGet("GetRoutine")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<RoutineDetailsDto>> GetRoutine(int id)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return Unauthorized();
+
+            var routine = await _db.Routines
+                .Include(r => r.RoutineExercises)
+                    .ThenInclude(re => re.Exercise)
+                .FirstOrDefaultAsync(r => r.Id == id && r.UserId == user.Id);
+
+            if (routine == null)
+                return NotFound("Routine not found");
+
+            var dto = new RoutineDetailsDto
+            {
+                Id = routine.Id,
+                Name = routine.Name,
+                Exercises = routine.RoutineExercises.Select(re => new ExerciseInRoutineDto
+                {
+                    ExerciseId = re.Id,
+                    Name = re.Exercise?.Name,
+                    Reps = re.Reps,
+                    Sets = re.set,
+                    Weight = re.Weight
+                    
+                }).ToList()
+            };
+
+            return Ok(dto);
+        }
+
+
+        [HttpPost("AddExercise")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> AddExercise([FromForm] AddExerciseDto model)
+        {
+            if (string.IsNullOrWhiteSpace(model.Name) || model.ExerImg == null)
+                return BadRequest("Name and image are required.");
+
+            var result = await _routineRepository.AddExerciseAsync(model);
+            if (!result)
+                return BadRequest("Muscle group not found.");
+
+            return Ok("Exercise added successfully.");
+        }
+
+        [HttpPost("AddMuscle")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> AddMuscle([FromForm] AddmuscelsDTO model)
+        {
+            var result = await _routineRepository.AddMuscleAsync(model);
+            if (!result)
+                return BadRequest("Failed to add muscle. It may already exist or input was invalid.");
+
+            return Ok("Muscle added successfully.");
+        }
+
+
+        
     }
 }

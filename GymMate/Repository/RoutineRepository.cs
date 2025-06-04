@@ -35,29 +35,22 @@ namespace GymMate.Repository
             await _context.SaveChangesAsync();
             return routine;
         }
-        public async Task<IEnumerable<ExerciseDto>> GetExercisesAsync(string? muscleName = null, string? search = null)
+        public async Task<IEnumerable<ExerciseDto>> GetExercisesAsync()
         {
-            var query = _context.Exercises
-                .Include(e => e.Muscle)
-                .AsQueryable();
+            var exercises = await _context.Exercises.Include(e=>e.Muscle).ToListAsync(); 
 
-            if (!string.IsNullOrEmpty(muscleName))
+            var result = exercises.Select(e => new ExerciseDto
             {
-                query = query.Where(e => e.Muscle.Name == muscleName);
-            }
-
-            if (!string.IsNullOrEmpty(search))
-            {
-                query = query.Where(e => e.Name.Contains(search));
-            }
-
-            return await query.Select(e => new ExerciseDto
-            {
-                Id = e.Id,
+                ExersiseId=e.Id,
                 Name = e.Name,
-                MuscleGroupName = e.Muscle.Name,
-                MuscleImageBase64 = e.Muscle.Image != null ? Convert.ToBase64String(e.Muscle.Image) : null
-            }).ToListAsync();
+                Description = e.Description,
+                MuscleGroupName = e.Muscle?.Name,
+                ExerImgBase64 = e.ExerciseImg != null ? Convert.ToBase64String(e.ExerciseImg) : null
+
+            });
+
+
+            return result;
         }
 
         public async Task<bool> UpdateRoutineNameAsync(string userId, UpdateRoutineNameDto dto)
@@ -165,6 +158,68 @@ namespace GymMate.Repository
                 })
                 .ToListAsync();
         }
+
+
+      
+
+        public async Task<bool> AddExerciseAsync(AddExerciseDto model)
+        {
+            var muscle = await _context.Muscles.FirstOrDefaultAsync(m => m.Name.ToLower() == model.MuscleGroupName.ToLower());
+            if (muscle == null)
+                return false;
+
+            
+            var exercise = new Exercise
+            {
+                Name = model.Name,
+                MuscleId = muscle.Id,
+                Description = model.Description, 
+                
+            };
+            if (model.ExerImg != null)
+            {
+                byte[] b = new byte[model.ExerImg.Length];
+                model.ExerImg.OpenReadStream().Read(b);
+                exercise.ExerciseImg = b;
+
+
+            }
+
+
+            await _context.Exercises.AddAsync(exercise);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        public async Task<bool> AddMuscleAsync(AddmuscelsDTO model)
+        {
+            if (string.IsNullOrWhiteSpace(model.Name))
+                return false;
+
+            
+            bool exists = await _context.Muscles
+                .AnyAsync(m => m.Name.ToLower() == model.Name.ToLower());
+
+            if (exists)
+                return false;
+
+            var muscle = new Muscle
+            {
+                Name = model.Name
+            };
+
+            if (model.MuscelImg != null && model.MuscelImg.Length > 0)
+            {
+                using var memoryStream = new MemoryStream();
+                await model.MuscelImg.CopyToAsync(memoryStream);
+                muscle.Image = memoryStream.ToArray();
+            }
+
+            await _context.Muscles.AddAsync(muscle);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+
 
     }
 }

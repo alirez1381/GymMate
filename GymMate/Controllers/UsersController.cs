@@ -111,5 +111,40 @@ namespace Magic_Villa.Controllers
 
             return Ok(new { message = "Password has been reset successfully." });
         }
+
+
+
+        [HttpGet("GetProfile")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetProfile([FromQuery] string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return BadRequest("Email is required");
+
+            var user = await _userRepository.GetProfile(email);
+
+            if (user == null)
+                return NotFound("User not found");
+
+            return Ok(user);
+        }
+
+        [HttpPut("UpdateProfile")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> UpdateProfile([FromForm] ProfileDTO model)
+        {
+            if (string.IsNullOrWhiteSpace(model.UserName))
+                return BadRequest("Email/UserName is required.");
+
+            var result = await _userRepository.UpdateProfile(model);
+
+            if (!result)
+                return NotFound("User not found.");
+
+            return Ok("Profile updated successfully.");
+        }
     }
 }

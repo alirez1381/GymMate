@@ -13,6 +13,7 @@ using System.Security.Claims;
 using System.Text;
 using GymMate.Model;
 using GymMate.Model.DTO;
+using Microsoft.EntityFrameworkCore;
 
 namespace GymMate.Repository
 {
@@ -67,7 +68,7 @@ namespace GymMate.Repository
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, user.Id.ToString()),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Role, roles.FirstOrDefault())
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
@@ -210,7 +211,47 @@ namespace GymMate.Repository
             return false;
         }
 
+        public async Task<ProfileDTO?> GetProfile(string email)
+        {
+            var user = await _db.ApplicationUsers
+                .FirstOrDefaultAsync(x => x.Email.ToLower() == email.ToLower());
+
+            if (user == null) return null;
+
+            return new ProfileDTO
+            {
+                UserName = user.Email,
+                Name = user.Name,
+                LastName = user.LastName,
+
+            };
+
+        }
+
+        public async Task<bool> UpdateProfile(ProfileDTO model)
+        {
+            var user = await _db.ApplicationUsers.FirstOrDefaultAsync(x => x.Email.ToLower() == model.UserName.ToLower());
+
+            if (user == null)
+                return false;
+
+            user.Name = model.Name;
+            user.LastName = model.LastName;
+            user.Email = model.UserName;
+            if (model.Image != null)
+            {
+                byte[] b = new byte[model.Image.Length];
+                model.Image.OpenReadStream().Read(b);
+                user.Image = b;
+
+
+            }
+            _db.Update(user);
+            await _db.SaveChangesAsync();
+            return true;
+        }
 
 
     }
 }
+

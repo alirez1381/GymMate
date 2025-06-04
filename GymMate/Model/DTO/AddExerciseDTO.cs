@@ -1,14 +1,12 @@
 ﻿namespace GymMate.Model.DTO
 {
-    public class ExerciseDto
+    public class AddExerciseDto
     {
-        public int ExersiseId { get; set; } 
+      
         public string Name { get; set; }
         public string MuscleGroupName { get; set; }
         public string Description { get; set; }
-        public string ExerImgBase64 { get; set; } // یا ExerImgUrl
-
+        public IFormFile ExerImg { get; set; }
 
     }
 }
-
