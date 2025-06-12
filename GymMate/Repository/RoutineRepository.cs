@@ -41,7 +41,7 @@ namespace GymMate.Repository
 
             var result = exercises.Select(e => new ExerciseDto
             {
-                ExersiseId=e.Id,
+                exerciseId=e.Id,
                 Name = e.Name,
                 Description = e.Description,
                 MuscleGroupName = e.Muscle?.Name,

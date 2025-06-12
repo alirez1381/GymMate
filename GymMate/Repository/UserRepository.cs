@@ -19,15 +19,15 @@ namespace GymMate.Repository
 {
     public class UserRepository : IUserRepository
 
-        
+
     {
         private ApplicationDbContext _db;
         private string secretKey;
         private UserManager<ApplicationUser> _userManager;
         private RoleManager<IdentityRole> _RoleManager;
         private IMapper _mapper;
-        
-        public UserRepository(ApplicationDbContext db, IConfiguration configuration , UserManager<ApplicationUser> userManager , IMapper mapper, RoleManager<IdentityRole>  roleManager)
+
+        public UserRepository(ApplicationDbContext db, IConfiguration configuration, UserManager<ApplicationUser> userManager, IMapper mapper, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
             secretKey = configuration.GetValue<string>("ApiSetting:Secret");
@@ -38,7 +38,7 @@ namespace GymMate.Repository
         }
         public bool IsUniqueUser(string username)
         {
-            var user= _db.ApplicationUsers.FirstOrDefault(x=>x.UserName == username);
+            var user = _db.ApplicationUsers.FirstOrDefault(x => x.UserName == username);
             if (user == null)
             {
                 return true;
@@ -48,13 +48,13 @@ namespace GymMate.Repository
 
         public async Task<LoginResponseDTO> Login(LoginRequestDTO loginRequest)
         {
-           var user= _db.ApplicationUsers.FirstOrDefault(u=>u.UserName.ToLower() == loginRequest.UserName.ToLower());
+            var user = _db.ApplicationUsers.FirstOrDefault(u => u.UserName.ToLower() == loginRequest.UserName.ToLower());
             bool isValid = await _userManager.CheckPasswordAsync(user, loginRequest.Password);
-            if(user == null || isValid == false )
+            if (user == null || isValid == false)
             {
                 return new LoginResponseDTO()
                 {
-                    Token ="",
+                    Token = "",
                     User = null,
                 };
 
@@ -81,9 +81,9 @@ namespace GymMate.Repository
             LoginResponseDTO loginResponseDTO = new LoginResponseDTO()
             {
                 Token = tokenHandler.WriteToken(token),
-                User = _mapper.Map<UserDTO>(user) ,
+                User = _mapper.Map<UserDTO>(user),
                 Role = roles.FirstOrDefault(),
-               
+
             };
             return loginResponseDTO;
         }
@@ -94,14 +94,14 @@ namespace GymMate.Repository
             ApplicationUser user = new()
             {
                 UserName = registerationRequestDTO.Username,
-               
+
                 Email = registerationRequestDTO.Username,
-               
-               
+
+
 
             };
 
-           var result = await _userManager.CreateAsync(user,registerationRequestDTO.Password);
+            var result = await _userManager.CreateAsync(user, registerationRequestDTO.Password);
             if (result.Succeeded)
             {
                 await SendConfirmationEmail(user);
@@ -111,12 +111,12 @@ namespace GymMate.Repository
                 }
 
                 await _userManager.AddToRoleAsync(user, "User");
-                var userToReturn = _db.ApplicationUsers.FirstOrDefault(u=>u.UserName == registerationRequestDTO.Username);
+                var userToReturn = _db.ApplicationUsers.FirstOrDefault(u => u.UserName == registerationRequestDTO.Username);
                 return new UserDTO
                 {
                     Id = userToReturn.Id,
                     UserName = userToReturn.UserName,
-                    
+
                 };
             }
 
@@ -206,9 +206,45 @@ namespace GymMate.Repository
                 user.PasswordResetExpireDate = null;
                 await _userManager.UpdateAsync(user);
                 return true;
-                }
+            }
 
             return false;
+        }
+
+
+
+        public async Task<bool> UpdateProfile(ProfileDTO model)
+        {
+            var user = await _db.ApplicationUsers.FirstOrDefaultAsync(x => x.Email.ToLower() == model.UserName.ToLower());
+
+            if (user == null)
+                return false;
+
+            if (!string.IsNullOrEmpty(model.ImageBase64))
+            {
+                try
+                {
+                    // اگر فرمت Base64 شامل "data:image..." بود، جداش کن
+                    var base64Data = model.ImageBase64.Contains(',')
+                        ? model.ImageBase64.Split(',')[1]
+                        : model.ImageBase64;
+
+                    user.Image = Convert.FromBase64String(base64Data);
+                }
+                catch (FormatException)
+                {
+                    // داده نامعتبر است
+                    return false;
+                }
+            }
+
+            user.Name = model.Name;
+            user.LastName = model.LastName;
+            user.Email = model.UserName;
+            
+            _db.Update(user);
+            await _db.SaveChangesAsync();
+            return true;
         }
 
         public async Task<ProfileDTO?> GetProfile(string email)
@@ -218,40 +254,28 @@ namespace GymMate.Repository
 
             if (user == null) return null;
 
-            return new ProfileDTO
+            string? base64Image = null;
+            if (user.Image != null && user.Image.Length > 0)
+            {
+                base64Image = $"data:image/png;base64,{Convert.ToBase64String(user.Image)}";
+            }
+
+            ProfileDTO profile = new()
             {
                 UserName = user.Email,
                 Name = user.Name,
                 LastName = user.LastName,
+                ImageBase64 = base64Image
 
             };
+            
+
+            return profile;
+
 
         }
 
-        public async Task<bool> UpdateProfile(ProfileDTO model)
-        {
-            var user = await _db.ApplicationUsers.FirstOrDefaultAsync(x => x.Email.ToLower() == model.UserName.ToLower());
-
-            if (user == null)
-                return false;
-
-            user.Name = model.Name;
-            user.LastName = model.LastName;
-            user.Email = model.UserName;
-            if (model.Image != null)
-            {
-                byte[] b = new byte[model.Image.Length];
-                model.Image.OpenReadStream().Read(b);
-                user.Image = b;
-
-
-            }
-            _db.Update(user);
-            await _db.SaveChangesAsync();
-            return true;
-        }
-
-
+        
     }
 }
 
